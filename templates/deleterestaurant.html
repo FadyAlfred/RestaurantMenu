@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<h2> Are you sure you want to delete {{restaurant.name}}? </h2>
+
+<div class="row">
+<form action="#" class="col-md-1" method = 'post'>
+
+	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+
+</form>
+<a style="padding-left: 40px" class="col-md-1" href = '{{url_for('AllRestaurant')}}'>
+	<button class="btn btn-default delete">
+	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+</a>
+</div>
+{% endblock %}
